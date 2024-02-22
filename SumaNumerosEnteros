@@ -1,0 +1,26 @@
+# Programa para calcular la suma de los numeros enteros 1+2+3+4+5+6+...+
+
+#Usamos x5 como condtador: 0,1,2,3,4,5,6....
+#El resultado se deja en el registro x6
+#En cada vuelta de bucle sumamos el valor de x5 a la cuenta acumulada en x6
+
+	.text
+	
+	#Inicializar registros en 0
+	
+	addi x5, x0, 0
+	addi x6, x0, 0
+	
+	#Bucle principal
+bucle:
+	#x5 = x5+1
+	
+	addi x5, x5, 1
+	
+	# Calcular la suma acumulada
+	# x6 = x6 + x5
+	
+	add x6, x6, x5
+	
+	b bucle
+	

@@ -1,0 +1,9 @@
+# Ejemplo instruccion de resta sub
+
+	.text
+	# x5 = 7, x6 = 3
+	addi x5, x0, 7
+	addi x6, x0, 3
+	
+	# x7 = x5 - x6
+	sub x7, x5, x6

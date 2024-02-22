@@ -1,0 +1,28 @@
+# Ejemplo del calculo de una expresion
+
+# f = ( a + b )- c + d + 50
+# La expresion se va a evaluar para los valores a =1 , b=2, c=3. d=4
+#El resultado ira a x10
+
+	.text
+	# a = x5, b = x6, c = x7, d = x8
+	addi x5, x0, 1
+	addi x6, x0, 2
+	addi x7, x0, 3
+	addi x8, x0, 4
+	# Codigo para calcular al expresion generica
+	
+	#x9 =( a + b)
+	add x9, x5, x6
+	#x9 = (a+b)-c 
+	sub x9, x9, x7
+	#x9 = (a+b)-c + d
+	add x9, x9, x8
+	
+	#x10 = (a+b)-c + d + 50
+	
+	addi x10, x9, 50
+	
+	#terminar
+	li, a7, 10
+	ecall
